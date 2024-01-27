@@ -1,0 +1,112 @@
+ @import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap);
+
+ 
+    
+    *{ margin: 0px;
+    padding: 0px;
+    font-family: 'poppins'sans-serif;
+ }
+ body{
+  background-color: black;
+ }
+ .main{
+    background-image: url("assets/images/aa.jpg");
+    background-position: center center;
+    background-size: max(1200px,100vw);
+    background-repeat: no-repeat;
+    height: 72vh;
+    position: relative;
+    
+}
+.main.box{
+    height: 78vh;
+    width: 100%;
+    opacity: 0.88px;
+    position: absolute;
+    top:0;
+    background-color: black;
+     
+}
+nav{
+max-width: 70vw;
+justify-content: space-between;
+margin: auto;
+display: flex;
+align-items: center;
+height: 59px;
+}
+nav img{
+    color: red;
+    width: 114px;
+position: relative;
+z-index:10  ;
+} 
+nav button{
+    position: relative;
+    z-index:10  ;    
+}
+.hero{ 
+    font-family: 'Martel sans',sans-serif;
+     
+    height: 100% ;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    padding:0 20px;
+gap: 26;
+}
+.hero>:nth-child(1){
+    font-family: "poppins";
+    font-weight: bolder;
+    font-size: 44px;
+    text-align: center ;
+}
+.hero>:nth-child(2){
+    font-weight: 400;
+    font-size: 28px;
+}
+.hero>:nth-child(3){
+    font-weight: 400;
+    font-size: 24px;
+}
+.separation{
+ margin-top: -66px;
+    height: 9px;
+    background-color: rgb(124, 115, 115);
+}
+.btn{
+    padding: 3px 8px;
+    font-weight: bold;
+    background-color: white;
+}
+.hero-buttons{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.main input{
+  
+    padding:7px 101px 8px 14px;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color:   rgba(23,23,23,0.7);
+   border: 1px solid  rgba(246, 2358, 238, 0.5);;
+    gap: 4px; 
+}
+
+.btn-red-sm{
+    background-color: red;
+    color: white;
+}
