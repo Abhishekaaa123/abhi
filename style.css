@@ -1,213 +1,135 @@
- @import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap);
+ 
+*{ 
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
 
- 
-    
-    *{ margin: 0px;
-    padding: 0px;
-    font-family: 'poppins'sans-serif;
-    
- }
- body{
-  background-color: black;
- }
- .main{
-    background-image: url("assets/images/aa.jpg");
-    background-position: center center;
-    
-    background-size: max(1200px,100vw);
-    background-repeat: no-repeat;
-    height: 90vh;
-    position: relative;
-    
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:  #323946;
+    --text-color:#fff;
+    --main-color:#0ef;
 }
-.main.box{ 
-    
-    height: 80vh;
-    width: 100%;
-    opacity: 0.88px;
-    position: absolute;
-    top:0;
-    background-color: black;
-     
-}
-nav{
-max-width: 70vw;
-justify-content: space-between;
-margin: auto;
-display: flex;
-align-items: center;
-height: 59px;
-}
-nav img{
-    color: red;
-    width: 114px;
-position: relative;
-z-index:10  ;
-} 
-nav button{
-    position: relative;
-    z-index:10  ;    
-}
-.hero{ 
-    font-family: 'Martel sans',sans-serif;
-     
-    height: 100%;
-    display: flex;
-    align-items: center ;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    position: relative;
-    padding:0 20px;
-gap: 26;
-}
-.hero>:nth-child(1){
-    font-family: "poppins",sans-serif;
-    font-weight: bolder;
-    font-size: 44px;
-    text-align: center ;
-}
-.hero>:nth-child(2){
-    font-weight: 400;
-    font-size: 28px;
-}
-.hero>:nth-child(3){
-    font-weight: 400;
-    font-size: 24px;
-}
-.separation{
- 
-    height: 7px;
-    background-color: rgb(124, 115, 115);
-}
-.btn{
-    padding: 3px 8px;
-    font-weight:  400;
-    background-color: rgba(22, 7, 7, 0.46);
-    color: white;
-    border: 2px solid rgba(223, 206, 206, 0.904);
-    border-radius: 4px;
-    cursor: pointer;
-   
-}
-.hero-buttons{
+
+.align{
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 16px;
-}
-.btn-red{
-    background-color: red;
-    color: white;
-    padding: 3px 24px;
-    font-size: 20px;
-    border-radius: 4px;
-    font-weight: 400;
-}
-.main input{
-  
-    padding:7px 101px 8px 14px;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    border-radius: 4px;
-    background-color:   rgba(23,23,23,0.7);
-   border: 1px solid  rgba(246, 2358, 238, 0.5);;
-    gap: 4px; 
 }
 
-.btn-red-sm{
-    padding: 3px 8px;
-    background-color: red;
-    color: white;
-}
-.first{
-    display: flex;
-    align-items: center;
-    max-width: 80vw;
-    margin: auto;
-    color: white;
-    justify-items: center;
-    align-items: center;
-}
-.secimg{ 
-    position:relative;
-
-
-}
-.secimg img{
-    width: 555px;
-    position: relative;
-    z-index: 10;
-} 
-.secimg video{
-    position: absolute;
- top: 31px;
-    right: 0;
-     height: 270px;
-}
-section.first> div{
-    display: flex;
-    flex-direction: column;
-}
-section.first > div :nth-child(1){
-    font-size: 48px;
-    font-weight: bolder;
-}
-section.first > div :nth-child(2){
-    font-size: 28px;
-  
-}
-.faq h2{
+body{
+    background-color: rgb(19, 26, 56);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
     text-align: center;
-    font-size: 48px;
+    padding-top:5vw;
+    overflow: auto;
 }
-.faq{
-background-color: black;
-color:white;
-padding:24px;
- 
- 
+
+.turn-container{
+    width:170px;
+    height: 80px;
+    margin: auto;
+    font-size: 1.6REM;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-end: 3;
+    position: relative;
 }
-.faqbox:hover{
-    background-color: rgb(112, 104, 104);
-    color: white;
+
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-.faqbox{
-    transition: all 1s ease-out;
-    font-size: 24px;
-display: flex;
-justify-content: space-between;
-background-color: rgb(68, 67, 67);
-padding: 34px;
-max-width:70vw ;
-margin: 34px  auto;
-cursor: pointer;
+.statu{     
+  margin:0px;
+  padding: 0px;
+}
+
+.turn-container .turn-box{
+    border: 3px solid black;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+
+.bg{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows:repeat(3,1fr) ;
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid #000;
+}
+
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+.box:hover{
+    background-color: #FF2E63;
+}
+
+#play-again{
+    background-color: #FF2E63;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: aqua;
+    color: #000;
+}
+
+
+.social-media a{
+    
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background:transparent ;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2rem 1.5rem 2rem 0;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
 
 }
-footer{
-    color: white;
-    max-width: 60vw;
-margin: auto;
-padding: 14px;
-}
-footer .question{
- 
- padding: 34px 0;
- 
-}
-.footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    color: white;
-   
-}
-.footer a{
-    font-size: 14px;
-    color: white;
-}
-.footeritem{
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
+.social-media i{
+    color:gray;
 }
